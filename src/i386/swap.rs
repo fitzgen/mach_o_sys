@@ -64,7 +64,6 @@ impl ::std::default::Default for __mbstate_t {
 pub type __darwin_mbstate_t = __mbstate_t;
 pub type __darwin_ptrdiff_t = ::std::os::raw::c_long;
 pub type __darwin_size_t = ::std::os::raw::c_ulong;
-pub type __darwin_va_list = __builtin_va_list;
 pub type __darwin_wchar_t = ::std::os::raw::c_int;
 pub type __darwin_rune_t = __darwin_wchar_t;
 pub type __darwin_wint_t = ::std::os::raw::c_int;
@@ -1092,10 +1091,17 @@ impl ::std::default::Default for x86_float_state {
     fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
-#[derive(Debug)]
+#[derive(Copy)]
 pub struct Union_Unnamed3 {
     pub _bindgen_data_: [u32; 131usize],
+}
+impl ::std::clone::Clone for Union_Unnamed3 {
+    fn clone(&self) -> Self { *self }
+}
+impl ::std::fmt::Debug for Union_Unnamed3 {
+    fn fmt(&self, f: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
+        write!(f, "Union_Unnamed3 {{ ... }}")
+    }
 }
 impl Union_Unnamed3 {
     pub unsafe fn fs32(&mut self) -> *mut x86_float_state32_t {
@@ -1179,10 +1185,17 @@ impl ::std::default::Default for x86_avx_state {
     fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
-#[derive(Debug)]
+#[derive(Copy)]
 pub struct Union_Unnamed6 {
     pub _bindgen_data_: [u32; 211usize],
+}
+impl ::std::clone::Clone for Union_Unnamed6 {
+    fn clone(&self) -> Self { *self }
+}
+impl ::std::fmt::Debug for Union_Unnamed6 {
+    fn fmt(&self, f: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
+        write!(f, "Union_Unnamed6 {{ ... }}")
+    }
 }
 impl Union_Unnamed6 {
     pub unsafe fn as32(&mut self) -> *mut x86_avx_state32_t {
@@ -1225,7 +1238,7 @@ extern "C" {
      -> kern_return_t;
     pub fn swap_i386_thread_state(cpu: *mut i386_thread_state_t,
                                   target_byte_order: NXByteOrder);
-    pub fn swap_i386_float_state(fpu: *mut i386_float_state,
+    pub fn swap_i386_float_state(fpu: *mut i386_float_state_t,
                                  target_byte_order: NXByteOrder);
     pub fn swap_i386_exception_state(exc: *mut i386_exception_state_t,
                                      target_byte_order: NXByteOrder);

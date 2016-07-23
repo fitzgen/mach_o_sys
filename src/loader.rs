@@ -64,7 +64,6 @@ impl ::std::default::Default for __mbstate_t {
 pub type __darwin_mbstate_t = __mbstate_t;
 pub type __darwin_ptrdiff_t = ::std::os::raw::c_long;
 pub type __darwin_size_t = ::std::os::raw::c_ulong;
-pub type __darwin_va_list = __builtin_va_list;
 pub type __darwin_wchar_t = ::std::os::raw::c_int;
 pub type __darwin_rune_t = __darwin_wchar_t;
 pub type __darwin_wint_t = ::std::os::raw::c_int;
@@ -1078,10 +1077,17 @@ impl ::std::default::Default for x86_float_state {
     fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
-#[derive(Debug)]
+#[derive(Copy)]
 pub struct Union_Unnamed2 {
     pub _bindgen_data_: [u32; 131usize],
+}
+impl ::std::clone::Clone for Union_Unnamed2 {
+    fn clone(&self) -> Self { *self }
+}
+impl ::std::fmt::Debug for Union_Unnamed2 {
+    fn fmt(&self, f: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
+        write!(f, "Union_Unnamed2 {{ ... }}")
+    }
 }
 impl Union_Unnamed2 {
     pub unsafe fn fs32(&mut self) -> *mut x86_float_state32_t {
@@ -1165,10 +1171,17 @@ impl ::std::default::Default for x86_avx_state {
     fn default() -> Self { unsafe { ::std::mem::zeroed() } }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
-#[derive(Debug)]
+#[derive(Copy)]
 pub struct Union_Unnamed5 {
     pub _bindgen_data_: [u32; 211usize],
+}
+impl ::std::clone::Clone for Union_Unnamed5 {
+    fn clone(&self) -> Self { *self }
+}
+impl ::std::fmt::Debug for Union_Unnamed5 {
+    fn fmt(&self, f: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
+        write!(f, "Union_Unnamed5 {{ ... }}")
+    }
 }
 impl Union_Unnamed5 {
     pub unsafe fn as32(&mut self) -> *mut x86_avx_state32_t {
