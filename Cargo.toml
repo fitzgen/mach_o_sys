@@ -1,8 +1,10 @@
 [package]
 authors = ["Nick Fitzgerald <fitzgen@gmail.com>"]
 name = "mach_o_sys"
+description = "Bindings to the OSX mach-o system library"
 version = "0.1.0"
 license = "Apache-2.0/MIT"
 keywords = ["mach", "macho", "mach-o"]
+repository = "https://github.com/fitzgen/mach_o_sys"
 
 [dependencies]
