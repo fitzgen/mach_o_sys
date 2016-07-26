@@ -4,4 +4,33 @@
          non_camel_case_types,
          non_upper_case_globals,
          non_snake_case)]
-
+pub const N_GSYM: ::std::os::raw::c_uchar = 32;
+pub const N_FNAME: ::std::os::raw::c_uchar = 34;
+pub const N_FUN: ::std::os::raw::c_uchar = 36;
+pub const N_STSYM: ::std::os::raw::c_uchar = 38;
+pub const N_LCSYM: ::std::os::raw::c_uchar = 40;
+pub const N_BNSYM: ::std::os::raw::c_uchar = 46;
+pub const N_OPT: ::std::os::raw::c_uchar = 60;
+pub const N_RSYM: ::std::os::raw::c_uchar = 64;
+pub const N_SLINE: ::std::os::raw::c_uchar = 68;
+pub const N_ENSYM: ::std::os::raw::c_uchar = 78;
+pub const N_SSYM: ::std::os::raw::c_uchar = 96;
+pub const N_SO: ::std::os::raw::c_uchar = 100;
+pub const N_OSO: ::std::os::raw::c_uchar = 102;
+pub const N_LSYM: ::std::os::raw::c_uchar = 128;
+pub const N_BINCL: ::std::os::raw::c_uchar = 130;
+pub const N_SOL: ::std::os::raw::c_uchar = 132;
+pub const N_PARAMS: ::std::os::raw::c_uchar = 134;
+pub const N_VERSION: ::std::os::raw::c_uchar = 136;
+pub const N_OLEVEL: ::std::os::raw::c_uchar = 138;
+pub const N_PSYM: ::std::os::raw::c_uchar = 160;
+pub const N_EINCL: ::std::os::raw::c_uchar = 162;
+pub const N_ENTRY: ::std::os::raw::c_uchar = 164;
+pub const N_LBRAC: ::std::os::raw::c_uchar = 192;
+pub const N_EXCL: ::std::os::raw::c_uchar = 194;
+pub const N_RBRAC: ::std::os::raw::c_uchar = 224;
+pub const N_BCOMM: ::std::os::raw::c_uchar = 226;
+pub const N_ECOMM: ::std::os::raw::c_uchar = 228;
+pub const N_ECOML: ::std::os::raw::c_uchar = 232;
+pub const N_LENG: ::std::os::raw::c_uchar = 254;
+pub const N_PC: ::std::os::raw::c_uchar = 48;
